@@ -3,13 +3,13 @@ kind: Service
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"nginx","example-webhook-enabled":"true"},"name":"nginx-service","namespace":"default"},"spec":{"ports":[{"name":"http","port":70,"protocol":"TCP","targetPort":50}],"selector":{"app":"nginx"}}}
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"nginx","example-webhook-enabled":"true"},"name":"nginx-service","namespace":"default"},"spec":{"ports":[{"name":"http","port":70,"protocol":"TCP","targetPort":30}],"selector":{"app":"nginx"}}}
   creationTimestamp: "2024-01-30T05:54:07Z"
   labels:
     app: nginx
     author: minikube-user
     example-webhook-enabled: "true"
-    operation: CREATE
+    operation: UPDATE
   name: nginx-service
   namespace: default
 spec:
@@ -24,7 +24,7 @@ spec:
   - name: http
     port: 70
     protocol: TCP
-    targetPort: 50
+    targetPort: 30
   selector:
     app: nginx
   sessionAffinity: None
